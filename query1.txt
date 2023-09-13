@@ -38,20 +38,20 @@
 RID, Passageiro, Data(PASSAGEIROS) x (RESERVAS)
 
 -- 13. Exibir um relatório contendo ID, nome do passageiro, data em que ele realizoua sua reserva e nome da agência que ele utilizou. Ordenar o resultado de acordo com a data da reserva mais recente, seguido pelo nome da agência.
-RID, Passageiro, Data, Agencia(PASSAGEIROS) x (RESERVAS) x (AGENCIAS)
+
 
 -- 14. Exibir um relatório contendo ID, nome do passageiro, seu gênero, Sua cidade o nome da agência em que ele realizou sua reserva. Exibir o resultado somente para os passageiros do sexo feminino ou cujo a cidade seja Campos do Jordão.
-RID, Passageiro, Genero, Cidade, Agencia(PASSAGEIROS) x (RESERVAS) x (AGENCIAS) σ (Genero = 'F' ∨ Cidade = 'Campos do Jordão')
+
 
 -- 15. Exibir um relatório contendo o código da reserva, sua data, código do voo, data e hora do voo, origem e destino da viagem. Ordenar o resultado pela data do voo mais antigo, a hora do voo, o local de origem e o destino final. Substituir RID por Reserva e VID por Voo.
-Reserva, Data, Voo, Data, Hora, Origem, Destino (RESERVAS) x (VOOS) σ (Reserva = Voo) σ (Data = VID) σ (Data = min(Data)) σ (Hora = min(Hora)) σ (Origem = min(Origem)) σ (Destino = max(Destino))
+
 
 -- 16. Realize o produto cartesiano entre todas as relações. Quantas linhas e colunas| foram retornadas?
 ((PASSAGEIROS) x (AGENCIAS) x (VOOS) x (RESERVAS))
 5000 linhas, 17 colunas
 
 -- 17. Exibir um relatório contendo código do passageiro, seu nome, gênero e cidade, o código de seu voo, a data e hora do seu voo, o local de origem e o local de destino, o nome da agência que fez a reserva, o código e a data da reserva. Ordenar o resultado pelo nome do passageiro, seguido pela data da reserva, data do voo, hora do voo, local de origem, local de destino e nome da agência. Substituir PID por ID, VID por Voo e RID por Reserva.
-ID, Passageiro, Genero, Cidade, Voo, Data, Hora, Origem, Destino, Agencia(PASSAGEIROS) x (RESERVAS) x (VOOS)
+
 
 -- 18. Exibir um relatório contendo o local de origem de cada voo e o total de viagens que partiram de cada local.
 
