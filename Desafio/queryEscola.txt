@@ -1,0 +1,33 @@
+-- 1. Faça a projeção dos dados da relação ALUNOS.
+(ALUNOS)
+
+-- 2. Faça a projeção dos dados da relação PROFESSORES.
+(PROFESSORES)
+
+-- 3. Faça a projeção somente dos atributos RA e aluno, da relação ALUNOS.
+(π aluno (ALUNOS))
+
+-- 4. Faça a projeção dos atributos CodAula, CodTurma e CodDisciplina, da relação AULAS.
+(π RA, aluno (ALUNOS))
+
+-- 5. Faça a projeção dos atributos CodAula, CodTurma, e CodDiciplina, da Relação AULAS
+π CodAula, CodTurma, CodDiciplina (AULAS)
+
+-- 6. Selecione somente as linhas da relação ALUNOS, cujo atributos Sexo seja masculino
+(σ Sexo = 'M' (ALUNO))
+
+-- 7. Selecione somente as linhas da relação MATRICULAS, cujo atributos CodMatricula seja maior que 4
+(σ CodMatricula > 4 (MATRICULAS))
+
+-- 8. Selecionar o RA, nome e telefone dos alunos. Exibir o resultado somente para os alunos que forem do sexo feminino
+π RA, Aluno, telefone (σ Sexo = 'F' (ALUNO))
+
+-- 9. Produto cartesiano entre DISCIPLINA e PROFESSORES
+((DISCIPLINA) x (PROFESSORES))
+
+-- 10. Selecionar o RA, nome do professorar e o nome da disciplina que ele ministra.
+π PROFESSORES.RA, 
+	Professor, 
+	Disciplina
+	(σ DISCIPLINA.RA = PROFESSORES.RA
+	((DISCIPLINA) x (PROFESSORES)))

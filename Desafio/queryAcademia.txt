@@ -1,0 +1,149 @@
+1. Faça a projeção de todos os atributos da relação CLIENTES.
+(CLIENTES)
+
+2. Faça a projeção de todos os atributos da relação CLIENTES. Ordene o resultado por
+ordem alfabética.
+(τ NomeCli asc (CLIENTES))
+
+3. Faça a projeção dos atributos referentes ao código, nome e gênero existentes dentro
+da relação CLIENTES.
+π CodCli, NomeCli, GeneroCli (CLIENTES)
+
+4. Faça a projeção dos atributos referentes ao código, nome e gênero existentes dentro
+da relação CLIENTES. Recupere somente as informações dos clientes do sexo
+feminino.
+σ GeneroCli = 'F' (π CodCli, NomeCli, GeneroCli (CLIENTES))
+
+5. Faça a projeção de todos os atributos da relação DEPENDENTES cujo gênero seja
+masculino.
+σ GeneroDep = 'M' (DEPENDENTES)
+
+6. Faça a projeção de todos os atributos da relação DEPENDENTES cujo gênero seja
+masculino ou o código do cliente seja maior ou igual a 3.
+σ GeneroDep = 'M' ∨ CodCli ≥ 3 (DEPENDENTES)
+
+7. Faça a projeção do nome do cliente, seu gênero e telefone. Recupere também o
+nome e gênero de todos os seus dependentes.
+π CLIENTES.NomeCli,
+CLIENTES.GeneroCli,
+CLIENTES.TelCli,
+DEPENDENTES.NomeDep,
+DEPENDENTES.GeneroDep
+(σ CLIENTES.CodCli = DEPENDENTES.CodCli (DEPENDENTES ⨯ CLIENTES))
+
+8. Faça a projeção de todos os atributos da relação PROFESSORES cujo gênero seja
+masculino.
+σ GeneroProf = 'M' (PROFESSORES)
+
+9. Faça a projeção do código do professor, seu nome e o nome da modalidade que ele
+ensina.
+π PROFESSORES.CodProf,
+PROFESSORES.NomeProf,
+MODALIDADES.NomeMod
+(σ PROFESSORES.CodProf = MODALIDADES.CodProf (PROFESSORES ⨯ MODALIDADES))
+
+10. Faça a projeção do código do professor, seu nome e o nome da modalidade que ele
+ensina. Recupere somente os dados dos professores do sexo feminino.
+π PROFESSORES.CodProf,
+PROFESSORES.NomeProf,
+MODALIDADES.NomeMod
+(σ PROFESSORES.CodProf = MODALIDADES.CodProf ∧ PROFESSORES.GeneroProf =
+'F'(PROFESSORES ⨯ MODALIDADES))
+
+11. Faça a projeção do código do aluno, seu nome, seu email e o nome da modalidade
+que ele pratica.
+π CLIENTES.CodCli,
+CLIENTES.NomeCli,
+CLIENTES.EmailCli,
+MODALIDADES.NomeMod (σ MATRICULAS.CodCli = CLIENTES.CodCli ∧
+MATRICULAS.CodMod = MODALIDADES.CodMod ((MODALIDADES ⨯ CLIENTES) ⨯
+MATRICULAS))
+
+12. Faça a projeção do código do aluno, seu nome, seu email e o nome da modalidade
+que ele pratica. Recupere somente os dados de quem pratica Aikido.
+π CLIENTES.CodCli,
+CLIENTES.NomeCli,
+CLIENTES.EmailCli,
+MODALIDADES.NomeMod
+(σ MATRICULAS.CodCli = CLIENTES.CodCli ∧ MATRICULAS.CodMod =
+MODALIDADES.CodMod ∧ MODALIDADES.NomeMod = 'Aikido' ((MODALIDADES ⨯ CLIENTES) ⨯
+MATRICULAS))
+
+13. Faça a projeção do código do aluno, seu nome, seu email e o nome da modalidade
+que ele pratica. Recupere somente os dados de quem pratica Musculação, Basquete
+ou Hung-Fu.
+π CLIENTES.CodCli,
+CLIENTES.NomeCli,
+CLIENTES.EmailCli,
+MODALIDADES.NomeMod
+(σ MATRICULAS.CodCli = CLIENTES.CodCli ∧ MATRICULAS.CodMod =
+MODALIDADES.CodMod ∧ MODALIDADES.NomeMod = 'Musculação' ∨
+MODALIDADES.NomeMod = 'Basquete' ∨ MODALIDADES.NomeMod =
+'HungFu'((MODALIDADES ⨯ MATRICULAS) ⨯ CLIENTES))
+
+14. Faça a projeção do código do aluno, seu nome, seu email e o nome da modalidade
+que ele pratica e o nome do professor que ensina essa modalidade.
+π CLIENTES.CodCli,
+CLIENTES.NomeCli,
+CLIENTES.EmailCli,
+MODALIDADES.NomeMod,
+PROFESSORES.NomeProf
+(σ MATRICULAS.CodCli = CLIENTES.CodCli ∧ MATRICULAS.CodMod =
+MODALIDADES.CodMod ∧ PROFESSORES.CodProf = MODALIDADES.CodProf (((MODALIDADES
+⨯ CLIENTES) ⨯ MATRICULAS) ⨯ PROFESSORES))
+
+15. Faça a projeção do código da modalidade, seu nome, o nome do cliente que a pratica
+e o nome de seu instrutor. Ordene o resultado pelo nome da modalidade.
+τ NomeMod asc
+(π MODALIDADES.CodMod,
+MODALIDADES.NomeMod,
+CLIENTES.NomeCli,
+PROFESSORES.NomeProf
+(σ MATRICULAS.CodCli = CLIENTES.CodCli ∧ MATRICULAS.CodMod =
+MODALIDADES.CodMod ∧ MODALIDADES.CodProf = PROFESSORES.CodProf (((MODALIDADES
+⨯ CLIENTES) ⨯ MATRICULAS) ⨯
+PROFESSORES)))
+
+16. Faça a projeção do nome do cliente, nome do seu professor e nome da modalidade
+que ele pratica. Recupere somente os dados referentes ao professor Roger.
+π CLIENTES.NomeCli,
+PROFESSORES.NomeProf,
+MODALIDADES.NomeMod
+(σ MATRICULAS.CodCli = CLIENTES.CodCli ∧ MATRICULAS.CodMod =
+MODALIDADES.CodMod ∧ MODALIDADES.CodProf = PROFESSORES.CodProf ∧
+PROFESSORES.NomeProf = 'Roger' ((MATRICULAS ⨯ MODALIDADES) ⨯ (CLIENTES ⨯
+PROFESSORES)))
+
+17. Faça a projeção do nome da modalidade e o total de alunos que cada uma delas
+possui. Recupere o resultado ordenando em ordem alfabética pelo nome da
+modalidade.
+τ NomeMod asc
+(π MODALIDADES.NomeMod,
+TOTAL γ NomeMod; COUNT(CLIENTES.CodCli) → TOTAL
+(σ MATRICULAS.CodCli = CLIENTES.CodCli ∧ MATRICULAS.CodMod =
+MODALIDADES.CodMod ((MATRICULAS ⨯ MODALIDADES) ⨯ CLIENTES)))
+
+18. Faça a projeção do nome dos professores e da quantidade de alunos de cada um
+deles. Ordene o resultado pelo total de alunos de cada modalidade, em ordem
+decrescente.
+τ TOTAL desc
+(π MODALIDADES.NomeMod,
+TOTAL γ NomeMod; COUNT(CLIENTES.CodCli) → TOTAL
+(σ MATRICULAS.CodCli = CLIENTES.CodCli ∧ MATRICULAS.CodMod =
+MODALIDADES.CodMod ((MATRICULAS ⨯ MODALIDADES) ⨯ CLIENTES)))
+
+19. Faça a projeção do nome dos alunos e da quantidade de modalidades que cada um
+pratica. Ordene o resultado pelo nome do aluno.
+τ NomeCli asc
+(π CLIENTES.NomeCli,
+TOTAL γ NomeCli; COUNT(MODALIDADES.CodMod) → TOTAL
+(σ MATRICULAS.CodCli = CLIENTES.CodCli ∧ MATRICULAS.CodMod =
+MODALIDADES.CodMod ((MATRICULAS ⨯ MODALIDADES) ⨯ CLIENTES)))
+
+20. Faça a projeção do nome dos clientes e da quantidade de dependentes que cada um
+deles possui. Ordene o resultado de acordo com o total de dependentes de cada
+cliente em ordem decrescente.
+τ TOTAL desc
+(π CLIENTES.NomeCli,
+TOTAL γ NomeCli; COUNT(DEPENDENTES.CodDep) → TOTAL
+(σ CLIENTES.CodCli = DEPENDENTES.CodCli (DEPENDENTES ⨯ CLIENTES)))
