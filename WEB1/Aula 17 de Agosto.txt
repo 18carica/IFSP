@@ -1,0 +1,107 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preencha oformulário abaixo</title>
+    <style>
+        <table>, th, td{
+            border: 1px solid black;
+        border-collapse;
+    }    
+</style>
+</head>
+<body>
+    <h1>Dados Pessoais</h1>
+    <table>
+        <tr>
+            <td>Nome do Aluno:<input type="text" size="2%"></td> 
+        </tr>
+            <td>Nascimento (dd/mm/aaaa):<input type="text" size="2%">/<input type="text" size="2%">/<input type="texte" size="2%"></td>
+        </tr>
+        <tr>
+            <td>RG:<input type="text"></td>
+        </tr>
+        <tr>
+            <td>CPF:<input type="text"></td>
+        </tr>
+    </table>
+       
+       <h2>Dados de endereço</h2> 
+       <table>
+        <tr>
+            <td>Rua:<input type="texte"size="2%"> Número:<input type="texte"size="2%"></td>
+        </tr>
+        <tr>
+            <td>Bairro:<input type="texte" size="2%"></td>
+        </tr>
+        <tr>
+            <td>Estado:<input type="text"</td>
+            
+            <select id="estado" name="estado">
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+                <option value="EX">Estrangeiro</option>
+            </select>
+        </tr>
+        <tr>
+            <td>Cidade:<input type="texte"</td>
+        </tr>  
+        <tr>
+            <td>CEP:<input type="texte" size="2%">-<input type="text" size="2%"></td>
+        </tr>
+    </table>  
+    <h3>Dados do Login</h3> 
+    <table>
+        <tr>
+            <td>E-mail:<input type="texte"></td> 
+        </tr>
+        <tr>
+            <td>Imagem de perfil:<input type="file"</td>
+        </tr>
+        <tr>
+            <td>Login de usuário:<input type="texte"</td>
+        </tr>
+        <tr>
+            <td>
+        </tr>
+
+    </table>
+    
+            
+            
+        </tr>
+   
+        
+    
+</head>
+<body>
+    
+</body>
+</html>

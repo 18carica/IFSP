@@ -1,0 +1,32 @@
+.principal{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+/* Aplica em todos os elementos da classe "principal" */
+.principal > *{
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+    border-radius: 5;
+}
+.header{
+    background-color: brown;
+    height: 120px;
+}
+.rodape{
+    background-color: red;
+    height: 80px;
+}
+.main{
+    text-align: left;
+    background-color: aqua;
+    height: 300px;
+    font-size: 24px;
+}
+.lado1{
+    background-color: violet;
+}
+.lado2{
+    background-color: violet;
+}

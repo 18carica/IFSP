@@ -1,0 +1,14 @@
+sub-rotina iniciada com void é um procedimento
+função não pode ser usada solta.
+funçoes externas
+procedimentos externos
+procedimentos internos estão nas bibliotecas
+#define _USE_MATH_DEFINES - USAR QUANDO O PROGRAMA É NO WINDOWS/VISUAL CODE
+Toda linguagem da biblioteca iniciada com C é herdada da linguagem C para C++
+Quando eu entro com caracter tem que limpar o bufter (tem no monitor de vídeo, no mouse, no teclado, em uma caneta ótica.
+
+ver linguagem R (para conhecimento)
+Ctdlib conversão de caracter
+
+
+ 

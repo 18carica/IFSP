@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Aula 17 - Responsividade</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <div class="principal">
+        <header class="header">
+            cabeçalho
+        </header>
+        <articule class="main">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa earum id cum officiis officia qui atque. Voluptates repudiandae sapiente dignissimos quo deserunt qui fugit, tempora assumenda atque. Nisi, corporis cum.
+        </articule>
+        <aside class="lado1">
+            <h1>Lado 1</h1>
+        </aside>
+        <aside class="lado2">
+            <h1>Lado 2</h1>
+        </aside>
+        <footer class="rodape">
+            <h1>rodape</h1>
+        </footer>
+    </div>
+</body>
+</html>
