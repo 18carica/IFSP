@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2</title>
+</head>
+<body>
+    <table border="1">
+        <tr colspan="3">Dados Pessoais:</tr>
+        <tr>
+            <td colspan="3">Nome do Aluno:
+                <input type="text" id="text" name="text">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">Nascimento:
+                <input type="text" id="text" name="dia" size="2">/<input type="text" id="text" name="mes" size="2">/<input type="text" id="text" name="ano" size="4">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">Nome da Mae:
+                <input type="text" id="text" name="text">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">Nome do Pai:
+                <input type="text" id="text" name="text">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">Telefone: DDD (<input type="text" id="ddd" name="ddd">)
+                Tel:<input type="tel" id="tel" name="tel">
+                Ramal:<input type="tel" id="ramal" name="ramal">   
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">E-Mail:
+                <input type="text" id="text" name="text">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">Informacoes de Matricula</td>
+        </tr>
+        <tr>
+            <td>Series:
+                <select name="serie" id="serie">
+                <option value="" disabled selected></option>
+                <option value="pre-escolar">pre-escolar</option>
+                <option value="Fundamental">Fundamental</option>
+                <option value="Medio">Medio</option>
+                </select>
+            </td>
+            <td rowspan="4">Turno:
+                <input type="radio" name="turno" id="manha" value="manha">
+                <label for="manha">Manha</label>
+                <input type="radio" name="turno" id="tarde" value="tarde">
+                <label for="tarde">Tarde</label>
+            </td>
+            <td>Atividades Extracurriculares:
+                <form>
+                <input type="checkbox">
+                <label for="atividades">Informatica</label><br>
+                <input type="checkbox">
+                <label for="atividades">Musica</label><br>
+                <input type="checkbox">
+                <label for="atividades">Balet</label><br>
+                <input type="checkbox">
+                <label for="atividades">Pintura</label><br>
+                <input type="checkbox">
+                <label for="atividades">Judo</label><br>
+                <input type="checkbox">
+                <label for="atividades">Futebol</label><br>
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

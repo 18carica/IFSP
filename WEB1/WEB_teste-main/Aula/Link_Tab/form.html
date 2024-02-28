@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buttons</title>
+</head>
+<body>
+    <form>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">Masculino</label><br>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">Feminino</label><br>
+        <input type="radio" name="gender" id="outro" value="outro">
+        <label for="outro">Outro</label><br>
+    </form>
+    <form>
+        <input type="checkbox" name="fruits" id="apple" value="apple">
+        <label for="apple">Maçã</label><br>
+        <input type="checkbox" name="fruits" id="banana" value="banana">
+        <label for="banana">Banana</label><br>
+        <input type="checkbox" name="fruits" id="orange" value="orange">
+        <label for="orange">Laranja</label><br>
+    </form>
+    <form>
+        <label for="fruits">Escolha uma fruta:</label>
+        <select name="fruits" id="fruits">
+            <option value="" disabled selected></option>
+            <option value="apple">Maçã</option>
+            <option value="banana">Banana</option>
+            <option value="orange">Laranja</option>
+        </select>
+        <input type="submit" value="Enviar">
+    </form>
+    <form>
+        <input type="button" name="fruits" id="apple" value="apple">
+        <label for="apple">Maçã</label><br>
+        <input type="button" name="fruits" id="banana" value="banana">
+        <label for="banana">Banana</label><br>
+        <input type="button" name="fruits" id="orange" value="orange">
+        <label for="orange">Laranja</label><br>
+    </form>
+    <form>
+        <label for="fname">First name: </label>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname">
+    </form>
+    <form>
+        <label for="email">E-Mail: </label>
+        <input type="email" id="email" name="email"  placeholder="seuemail@example.com.br" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><br>
+        <label for="passwd">Senha: </label>
+        <input type="password" id="passwd" name="passwd"><br>
+        <label for="website">Website: </label>
+        <input type="url" id="website" name="website" multiple placeholder="https://www.example.com" pattern="https?://.*"><br>
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" name="phone"  placeholder="(XX) XXXX-XXXX" pattern="\(\d{2}\)\d{4}-\d{4}"><br>
+        <label for="quant">Quantidade:</label>
+        <input type="number" id="quantity" name="quant" size="4" min="1" max="10" step="1" value="1" required><br>
+        <label for="dob">Data de Nascimento:</label>
+        <input type="date" id="dob" name="dob"min="1900-01-01" max="31-12-2023" ><br>
+        <label for="color">Escolha uma cor:</label>
+        <input type="color" id="color" name="color" value="#000000" required><br>
+        <label for="volume">Volume:</label>
+        <input type="range" id="volume" name="volume" min="0" max="100" step="5" value="50"><br>
+        <label for="brightness">Brilho:</label>
+        <input type="range" id="brightness" name="brightness" min="0" max="100" step="25" value="50" list="tickmarks">
+        <datalist id="tickmarks">
+            <option value="0">
+            <option value="25">
+            <option value="50">
+            <option value="75">
+            <option value="100">            
+        </datalist><br>
+        <label for="browser">Navegador:</label>
+        <input type="text" id="browser" name="browser" list="browsers">
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Edge">
+            <option value="Safari">
+            <option value="Opera">
+        </datalist><br>
+        <label for="comments">Comentários:</label>
+        <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Digite seus Comentários..." required maxlength="200"></textarea><br>
+    </form><br>
+    <form oninput="result.value=parseInt(a.value) + parseInt(b.value)">
+        <label for="a">Número A:</label><br>
+        <input type="number" id="a" name="a" value="0"><br>
+        +<br>
+        <label for="b">Número B:</label><br>
+        <input type="number" id="b" name="b" value="0"><br>
+        =
+        <output name="result">0</output>
+    </form><br>
+    <input type="reset" value="Limpar">
+    <input type="submit" value="Enviar">
+    <form>
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name">
+            <br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email">
+        </fieldset>
+    </form>
+</body>
+</html>

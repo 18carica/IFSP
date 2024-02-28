@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Aula/assets/css/cad2.css">
+    <title>Formulário de Cadastro</title>
+    <style></style>
+</head>
+<body>
+    <h1>Formulário de Cadastro</h1>
+
+    <form id="cadastroForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" required>
+
+        <button type="button" onclick="adicionarCadastro()">Adicionar Cadastro</button>
+    </form>
+
+    <h2>Cadastros:</h2>
+
+    <table id="datagrid">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="/Aula/assets/JS/cad2.js"></script>
+</body>
+</html>

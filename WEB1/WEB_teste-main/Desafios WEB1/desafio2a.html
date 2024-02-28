@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2a</title>
+</head>
+<body>
+    <table frame="box">
+        <table border="1">
+            <tr>
+                <td colspan="3">
+                    <h4>
+                        Dados Pessoais
+                    </h4>
+                    <p>
+                        Nome do Aluno: <input type="text" id="text" name="text">
+                    </p>
+                    <p>
+                        Nascimento: <input type="text" size="4" name="dia">/<input type="text" size="4" name="mes">/<input type="text" size="8" name="ano">
+                    </p>
+                    <p>
+                        Nome da Mae: <input type="text" id="text" name="mae">
+                    </p>
+                    <p>
+                        Nome do Pai: <input type="text" id="text" name="pai">
+                    </p>
+                    <p>
+                        Telefone: DDD (<input type="text" id="ddd" name="ddd" size="2">)
+                        Tel:<input ctype="text" id="tel" name="tel" size="10">
+                        Ramal:<input type="text" id="ramal" name="ramal" size="4">   
+                    </p>
+                    <p>
+                        E-Mail: <input type="text" id="text" name="text">
+                    </p>
+                </td>
+            </tr>
+        </table>
+        
+        <table>
+            <table border="1">
+            <tr>
+                <td>
+                    Informacoes de Matricula
+                    <p>Series:<br>
+                        <select name="serie" id="serie">
+                            <option value="" disabled selected></option>
+                            <option value="pre-escolar">Pre-Escolar</option>
+                            <option value="Fundamental">Fundamental</option>
+                            <option value="Medio">Medio</option>
+                            <option value="Superior">Superior</option>
+                        </select>
+                    </p>
+                </td>
+                <td>
+                    <p rowspan="4">Turno: <br>
+                        <input type="radio" name="turno" id="manha" value="manha">
+                        <label for="manha">Manha</label><br>
+                        <input type="radio" name="turno" id="tarde" value="tarde">
+                        <label for="tarde">Tarde</label><br>
+                    </p>
+                </td>
+                <td>
+                    <form>Atividades Extracurriculares: <br>
+                        <input type="checkbox">
+                        <label for="atividades">Informatica</label><br>
+                        <input type="checkbox">
+                        <label for="atividades">Musica</label><br>
+                        <input type="checkbox">
+                        <label for="atividades">Balet</label><br>
+                        <input type="checkbox">
+                        <label for="atividades">Pintura</label><br>
+                        <input type="checkbox">
+                        <label for="atividades">Judo</label><br>
+                        <input type="checkbox">
+                        <label for="atividades">Futebol</label><br>
+                    </form>
+                </td>
+            </tr>
+        </table>
+        </table>
+    </table>
+</body>
+</html>

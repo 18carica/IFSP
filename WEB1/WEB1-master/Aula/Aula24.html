@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 24 - JS</title>
+</head>
+<body>
+    <script>
+        var idade = 20;
+        if(idade >= 18){
+            document.write("Voce é maior de idade<br>");
+        }
+        
+        var num1 = 10;
+        var num2 = 10;
+        document.write(num1 == num2); // true
+        document.write("<BR>"); // Quebra de linha
+        
+        document.write(num1 != num2); // false
+        document.write("<BR>");
+        
+        document.write(1 == "1"); // true
+        document.write("<BR>");
+        
+        document.write(1 === "1"); // false
+        document.write("<BR>");
+        
+        document.write(2 > "1"); // true
+        document.write("<BR>");
+        
+        document.write(1 === "1"); // false
+        document.write("<BR>");
+
+        var idade = 18;
+        var temCarteira = true;
+        if (idade >= 18 && temCarteira) {
+            document.write("Pode dirigir!<BR>");
+            }
+            else {
+                    document.write("Proibido dirigir!<BR>");
+                }
+        document.write("<table border=1><tr>");
+        for(var i = 0; i < 5; i++ ){
+            document.write("<td>Execução: " + (i + i) + "</td>");
+            }
+            document.write("</tr></table>")
+
+            function nomeDaFuncao(parametro) {
+                // Corpo da função
+            }
+            
+            function exibeMensagem() {
+                alert("Attenzione pickpocket");
+            }
+            // for(var i = 0; i < 10; i++){
+            //     exibeMensagem(); // Chamando a função declarada
+            //     exibeMensagem(); // Chamando a função novamente    
+            // }
+            exibeMensagem(); // Chamando a função declarada
+            exibeMensagem(); // Chamando a função novamente
+
+            var frutas = ["Maça", "Banana", "Laranja", "Pera"];
+            document.write(frutas.length);
+            document.write("<BR>");
+            for (var i = 0; i < frutas.length; i++) {
+                document.write("Frutas: "+ frutas[i] + "<br>");
+            }
+
+            function calcular() {
+                var num1 = parseFloat(document.getElementById("numero1").value);
+                var num2 = parseFloat(document.getElementById("numero2").value);
+                var resultado = num1 + num2;
+                document.getElementById("resultado").value = resultado;
+            }
+
+    </script>
+    <main>
+        <h1>Calculadora Simples</h1>
+        <input type="text" id="numero1">
+        <input type="text" id="numero2">
+        <button onclick="calcular()">Calcular</button>
+        <input type="text" id="resultado" readonly>
+    </main>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+        }
+
+        .modedejogo{
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .side-panel {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #game-board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+        }
+
+        .cell {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ccc;
+            text-align: center;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        #player1-wins, #player2-wins {
+            display: block;
+            margin-top: 5px;
+        }
+
+
+    </style>
+	<title>Jogo da Velha</title>
+</head>
+
+<body>
+    <div class="modedejogo">
+        <button onclick="cadastrarJogador2(1)">2 Players</button>
+        <button onclick="vscomputer(1)">Vs Computer</button>
+    </div>
+    <div class="container"> 
+        <div class="side-panel">
+            <label for="player1">Jogador 1:</label>
+            <input type="text" id="player1" placeholder="Nome do Jogador 1">
+            <span id="player1-wins">Vitórias: 0</span>
+            <button onclick="cadastrarJogador(1)">Cadastrar</button>
+            <button onclick="cadastrarComputador(3)">Computer VS</button>
+        </div>
+
+        <div id="game-board">
+            <div class="cell" onclick="cellClick(this)"></div>
+            <div class="cell" onclick="cellClick(this)"></div>
+            <div class="cell" onclick="cellClick(this)"></div>
+            <div class="cell" onclick="cellClick(this)"></div>
+            <div class="cell" onclick="cellClick(this)"></div>
+            <div class="cell" onclick="cellClick(this)"></div>
+            <div class="cell" onclick="cellClick(this)"></div>
+            <div class="cell" onclick="cellClick(this)"></div>
+            <div class="cell" onclick="cellClick(this)"></div>
+        </div>
+        
+        <div class="side-panel">
+            <label for="player2">Jogador 2:</label>
+            <input type="text" id="player2" placeholder="Nome do Jogador 2">
+            <span id="player2-wins">Vitórias: 0</span>
+            <button onclick="cadastrarJogador(2)">Cadastrar</button>
+        </div>
+</div>
+
+<script>
+let currentPlayer = 'X';
+let player1Wins = 0;
+let player2Wins = 0;
+let player1Name = '';
+let player2Name = '';
+
+function cadastrarJogador(playerNumber) {
+    const playerName = document.getElementById(`player${playerNumber}`).value;
+    
+    if (playerName.trim() !== '') {
+        if (playerNumber === 1) {
+            player1Name = playerName;
+            alert(`Jogador 1 cadastrado como: ${player1Name}`);
+        } else {
+            player2Name = playerName;
+            alert(`Jogador 2 cadastrado como: ${player2Name}`);
+        }
+    } else {
+        alert('Por favor, insira um nome válido para o jogador.');
+    }
+}
+
+function cellClick(cell) {
+    if (cell.innerText === '' && !checkWinner()) {
+        cell.innerText = currentPlayer;
+
+        if (checkWinner()) {
+            updateWinner();
+            resetBoard();
+        } else {
+            if (currentPlayer === 'X') {
+                currentPlayer = 'O';
+            } else {
+                currentPlayer = 'X';
+                // PC
+               // makeComputerMove();
+            }
+        }
+    }
+}
+
+function makeComputerMove() {
+    const emptyCells = document.querySelectorAll('.cell:not(:disabled):empty');
+    
+    if (emptyCells.length > 0) {
+        const randomIndex = Math.floor(Math.random() * emptyCells.length);
+        const randomCell = emptyCells[randomIndex];
+        randomCell.innerText = currentPlayer;
+        
+        if (checkWinner()) {
+            updateWinner();
+            resetBoard();
+        } else {
+            //currentPlayer == 'X'; // volta ao jogador
+            currentPlayer = currentPlayer === 'X' ? 'O': 'X';
+        }
+    }
+}
+
+function checkWinner() {
+    const cells = document.querySelectorAll('.cell');
+    const winningCombinations = [
+        [0, 1, 2], [3, 4, 5], [6, 7, 8], // linha
+        [0, 3, 6], [1, 4, 7], [2, 5, 8], // coluna
+        [0, 4, 8], [2, 4, 6]             // diagonal
+    ];
+
+    for (const combination of winningCombinations) {
+        const [a, b, c] = combination;
+        if (cells[a].innerText !== '' && cells[a].innerText === cells[b].innerText && cells[a].innerText === cells[c].innerText) {
+            return true;
+        }
+        console.log(cells[a].innerText + ' ' + cells[b].innerText + ' ' + cells[c].innerText);
+        
+    }
+
+    if ([...cells].every(cell => cell.innerText !== '')) {
+        resetBoard();
+    }
+
+    return false;
+}
+
+ // Vitorias 
+function updateWinner() {
+    const winner = currentPlayer === 'X' ? 'O' : 'X';
+    if (winner === 'X') {
+        player1Wins++;
+        document.getElementById('player1-wins').innerText = `${player1Name}Vitórias ${player1Wins}`;
+    } else {
+        player2Wins++;
+        document.getElementById('player2-wins').innerText = `${player2Name}Vitórias ${player2Wins}`;
+    }
+}
+
+function resetBoard() {
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach(cell => cell.innerText = '');
+}
+</script>
+</body>
+</html>

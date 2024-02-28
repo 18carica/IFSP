@@ -1,0 +1,125 @@
+main section {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+  }
+  
+  main section h1{
+    color: #FF4081;
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 45px;
+  }
+  .form-area {
+    flex-grow: 1;
+  }
+  .img-content {
+    flex-grow: 1;
+    text-align: end;
+  }
+  
+  
+  form {
+    display:flex;
+    flex-direction: column;
+  }
+  
+  form input{
+    color: #58555D;
+    font-size: 16px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid #686868;
+  }
+  
+  button{
+    background-color: #FF4081;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 50px;
+    width: 130px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #FF1565;
+    
+    transition: all .5s;
+  }
+  
+  form input::placeholder{
+    color: #58555D;
+    font-size: 16px;
+  }
+  
+  form textarea {
+    resize: none;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    height: 193px;
+  }
+  
+  form textarea::placeholder {
+    color: #58555D;
+    font-size: 17px;
+    padding: 10px 15px;
+  }
+  
+  
+  
+  /* RESPONSIVE DISPLAYS */
+  
+  /* MOBILE */
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    main section {
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    main section h1 {
+      font-size: 35px;
+      text-align: center;
+      padding: 20px;
+    }
+    .img-content {
+      text-align: center;
+    }
+    .img-content img {
+      width: 90%;
+    }
+    .form-area {
+      width: 100%;
+    }
+  }
+  
+  /* TABLET */
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    main section {
+      padding: 40px 20px;
+    }
+    form textarea {
+      height: 120px;
+    }
+    .img-content img {
+      width: 90%;
+    }
+    .img-content {
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  /* LAPTOP */
+  @media only screen and (min-width: 769px) and (max-width: 1279px) {
+    main section {
+      padding: 40px 20px;
+    }
+    .img-content img {
+      width: 80%;
+    }
+  }

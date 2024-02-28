@@ -1,0 +1,66 @@
+/* 
+    *: Isso representa todos os elementos HTML na página.
+    *::before e *::after: Esses são os pseudoelementos before 
+        e after de todos os elementos na página, respectivamente.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    word-spacing: 1.4px;
+    color: #3309a8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    height: 700px;
+    margin: 0 auto;
+    border: 10px solid;
+}
+
+.item {
+    width: 150px;
+    height: 150px;
+    background-color: #acaaaa;
+    padding: 1em;
+    font-weight: 700;
+    color: whitesmoke;
+    text-align: center;
+    border: 10px solid red;
+    border-radius: 10px;
+}
+
+
+.container {
+    display: flex;
+    /*flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;*/
+    /*flex-wrap: wrap;
+    align-content: center;
+    gap: 5px;*/
+}
+
+/*.item-1 {
+    font-size: 24px;
+}*/
+
+/*.item {
+    flex-grow: 1;
+}*/
+
+.item-3 {
+    flex: 1 0 100px;
+    /*align-self: flex-end;*/
+    order: -1;
+}

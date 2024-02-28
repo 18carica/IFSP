@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/Aula/assets/JS/aula25.js"></script>
+    <title>Aula 25 - </title>
+</head>
+<body>
+       <section style="background-color: gray; text-align: center;">
+        Javacript Aula
+       </section>
+       <div id="button" style="display: flex; justify-content: space-around; padding: 10px 20px;">
+            <input type="button" value="Botão 1" style="height: 70px;" onclick="btn1()">
+            <input type="button" value="Botão 2" onclick="btn2()">
+            <input type="button" value="Botão 3" onmouseover="btn3()">
+            <input type="button" value="Botão 4" onfocus="btn4()">
+       </div>
+       <div id="resultados" style="background-color: gray; text-align: center;">
+            <h1>Resultados</h1>
+            <p id="saida"></p>
+       </div>
+       <hr>
+       <h1>Datas</h1>
+       <input type="text" id="dia">
+       <input type="button" value="Pegar Dia" onclick="getDia()">
+       <input type="button" value="Pegar Data" onclick="exibirDataAtual()">
+       <input type="button" value="Pegar Formatada" onclick="exibirDataFormatada()">
+       <p id="dataFormatada"></p>
+
+       <h2>Diferenca entre datas</h2>
+       <input type="date" id="data1">
+       <input type="date" id="data2">
+       <input type="button" onclick="calcularDiferenca()" value="Calcular">
+       <p id="diferenca"></p>
+</body>
+</html>

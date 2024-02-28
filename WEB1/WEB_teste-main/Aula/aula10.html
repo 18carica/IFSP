@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        input[type="text"] {
+            border: 1px solid rgb(56, 30, 151);
+            border-radius: 4pt;
+            padding: 5px;
+        }
+        input[type="tel"] {
+            border: 1px solid rgb(143, 44, 44);
+            border-radius: 4pt;
+            padding: 5px;
+        }
+        input[type="email"] {
+            border: 1px solid rgb(65, 136, 89);
+            border-radius: 4pt;
+            padding: 5px;
+        }
+        /*div[class|="menu"] {
+            border-radius: 4px;
+        }*/
+        input[name^="usuario"] {
+            color: #99ffcc ;
+        }
+        input[name$="usuario"] {
+            background-color: #ccff00 ;
+        }
+        input[name*="user"] {
+            background-color: lightyellow;
+        }
+        h2 + p {
+            font-variant: small-caps;
+        }
+        article > h1 {
+            color: blue;
+        }
+        p{
+            color: gray;
+        }
+        p.especial {
+            color:black; /* restauracor do especial */
+        };
+        p:not(.especial) {
+            color: gray;
+        }
+        li:first-child {
+            color: red ;
+        }
+        li:last-child {
+            color: blue;
+        }
+        li:hover {
+            background-color: yellow;
+        }
+        li:hover {
+            color: red;
+        }
+
+    </style>
+    <title>Aula 10</title>
+</head>
+<body>
+    <form action="">
+        <input type="text">
+        <input type="tel" name="telfone-usuario" id="telfone-usuario">
+        <input type="email" name="usuario-email" id="usuario-email">
+    </form>
+    <div class="menu">
+        <article>
+            <h1>Titulo </h1>
+            <p>Inicio</p>
+            <h2>Subtitulo </h2>
+            <p>Texto </p>
+            <p>Mais texto </p>
+        </article>
+        <article>
+            <h1>Titulo principal</h1>
+            <section>
+            <h1>Titulo da secao</h1>
+            </section>
+            </article>
+    </div>
+        <p>Texto</p>
+        <p>Outro texto</p>
+        <p class ="especial">Texto especial</p>
+        <p>Mais texto</p>
+
+        <ul>
+            <li class="primeiro">Primeiro item</li>
+            <li class="segundo">Segundo item</li>
+            <li>Terceiro item</li>
+            <li class="ultimo">Quarto item</li>
+        </ul>
+</body>
+</html>

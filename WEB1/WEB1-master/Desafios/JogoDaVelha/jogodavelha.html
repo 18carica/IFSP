@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/Desafios/JogoDaVelha/assests/css/jogodavelha.css">
+    <title>Jogo da Velha</title>
+</head>
+<body>
+<div class="container">
+    <div class="side-panel">
+        <label for="player1">Jogador 1:</label>
+        <input type="text" id="player1" placeholder="Nome do Jogador 1">
+        <span id="player1-wins">Vitórias: 0</span>
+        <button onclick="cadastrarJogador(1)">Cadastrar Jogador 1</button>
+    </div>
+    <div id="game-board">
+        <div class="cell" onclick="cellClick(this)"></div>
+        <div class="cell" onclick="cellClick(this)"></div>
+        <div class="cell" onclick="cellClick(this)"></div>
+        <div class="cell" onclick="cellClick(this)"></div>
+        <div class="cell" onclick="cellClick(this)"></div>
+        <div class="cell" onclick="cellClick(this)"></div>
+        <div class="cell" onclick="cellClick(this)"></div>
+        <div class="cell" onclick="cellClick(this)"></div>
+        <div class="cell" onclick="cellClick(this)"></div>
+    </div>
+    <div class="side-panel">
+        <label for="player2">Jogador 2:</label>
+        <input type="text" id="player2" placeholder="Nome do Jogador 2">
+        <span id="player2-wins">Vitórias: 0</span>
+        <button onclick="cadastrarJogador(2)">Cadastrar Jogador 2</button>
+    </div>
+</div>
+<script src="/Desafios/JogoDaVelha/assests/js/jogodavelha.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,273 @@
+main h1 {
+  color: rgb(212, 125, 116);
+  font-size: 60px;
+  font-weight: 700;
+  margin: 81px 0px 5px 82px;
+  text-transform: capitalize;
+}
+
+main h3 {
+  color: #555555;
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: 82px;
+}
+
+main hr {
+  background: #C4C4C4;
+  width: 1244px;
+  height: 5px;
+  list-style: none;
+  border: none;
+}
+
+.artigo {
+  display: flex;
+}
+
+.artigo img {
+  margin: 95px 0 68px 112px;
+}
+
+.artigo article {
+  text-align: justify;
+  margin-left: 53px;
+}
+
+.artigo article h2 {
+  color: rgb(212, 125, 116);
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 37px;
+  margin-top: 108px;
+}
+
+.artigo article p {
+  color: #000000;
+  line-height: 21px;
+  font-weight: 300;
+  font-size: 18px;
+  width: 724px;
+  height: 105px;
+}
+
+#primeiro button {
+  margin-top: 53px;
+  width: 233px;
+  height: 51px;
+  background: rgb(212, 125, 116);
+  border-radius: 62px;
+  border-style: none;
+  color:#fff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+}
+
+#segundo button {
+  margin-top: 70px;
+  width: 233px;
+  height: 51px;
+  background: rgb(212, 125, 116);
+  border-radius: 62px;
+  border-style: none;
+  color:#fff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+}
+
+#terceiro button {
+  margin-top: 26px;
+  width: 233px;
+  height: 51px;
+  background: rgb(212, 125, 116);
+  border-radius: 62px;
+  border-style: none;
+  color:#fff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+}
+
+#primeiro button a,
+#segundo button a,
+#terceiro button a {
+  color:#fff;
+  text-decoration: none;
+}
+
+
+
+/* RESPONSIVE DISPLAYS */
+
+/* MOBILE */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+  /* CONTEÚDO */
+
+  section.artigo {
+      display: flex;
+      flex-direction: column;
+      align-content: flex-start;
+      margin: auto;
+      justify-content: center;
+  }
+
+  section.artigo article h2 {
+      font-size: 18px;
+      padding-right: 40px;
+      margin:auto;
+      text-align: center;
+      
+  }
+  section.artigo article p {
+      font-size: 12px;
+      width: 85%;
+      padding-bottom: 40px;
+      padding-top: 20px;
+      text-align: center;
+  }
+  section.artigo img {
+      width: 50%;
+      margin: auto; 
+      padding-bottom: 20px;
+      padding-top: 20px;
+      align-items: center;
+  }
+  main h1 {
+      margin-top: 20px;
+      margin-left: 20px;
+      text-align: center;
+  }
+
+  main h3 {   
+      margin-left: 20px;
+      text-align: center;
+  }
+
+  #primeiro button,
+  #segundo button,
+  #terceiro button {
+      width: 50%;
+      font-size: 14px;
+      margin-top: 80px;
+      margin-left: 50px;
+  }
+
+
+  #terceiro button {
+      margin-bottom: 20px;
+      
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  
+
+     /* CONTEÚDO */
+
+  section.artigo {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    margin: auto;
+    margin-top: 40px;
+  }
+
+  section.artigo article h2 {
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+      
+  }
+  section.artigo article p {
+    font-size: 12px;
+    width: 95%;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-right: 40px;
+  }
+  section.artigo img {
+    width: 40%;
+    margin: auto; 
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  main h1 {
+   margin:auto;
+   margin-top: 30px;
+  text-align: center;
+  }
+
+  main h3 {
+    margin-left: 20px;
+    text-align: center;
+  }
+
+  #primeiro button,
+  #segundo button,
+  #terceiro button {
+      width: 60%;
+      font-size: 15px;
+  }
+
+
+  #terceiro button {
+      margin-bottom: 20px;
+      margin-top: 50px;
+  }
+}
+
+/* LAPTOP */
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+  
+
+     /* CONTEÚDO */
+
+  section.artigo {
+    display: flex;
+    margin: auto;
+  }
+
+  section.artigo article h2 {
+      font-size: 25px;
+      margin: auto;
+      
+  }
+  section.artigo article p {
+      font-size: 15px;
+      width: 95%;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      padding-right: 40px;
+  }
+  section.artigo img {
+      width: 40%;
+      margin: auto; 
+      padding-bottom: 20px;
+      padding-top: 20px;
+      margin-left: 20px;
+  }
+  main h1 {
+      margin-top: 20px;
+      margin-left: 30px;
+  }
+  main h3 {
+      margin-left: 20px;
+  }
+  #primeiro button,
+  #segundo button,
+  #terceiro button {
+      width: 60%;
+      font-size: 15px;
+  }
+  #terceiro button {
+      margin-bottom: 20px;
+      margin-top: 50px;
+  }
+}

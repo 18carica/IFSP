@@ -1,0 +1,8 @@
+22/09 escolha do tema ( Entrega do Tema ) NÃO TERA TEMAS IGUAIS
+
+Lista de Conteudo
+    Pagina Incial
+        1 Menu ( Esquerda ou top)
+        4 Itens (4 Paginas)
+Mesmo Cabeçalho & Rodape (identico em todas as paginas)
+Sobre  (About)

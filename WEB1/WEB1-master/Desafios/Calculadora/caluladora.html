@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .calculadora {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 18px;
+            text-align: right; /* Alterado para alinhar à direita */
+        }
+
+        .btn_quadrado {
+            width: 48px;
+            height: 48px;
+            font-size: 18px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <title>Calculadora</title>
+</head>
+<body>
+
+<div class="calculadora">
+    <input type="text" id="display" disabled>
+    <br>
+    <button class="btn_quadrado">7</button>
+    <button class="btn_quadrado">8</button>
+    <button class="btn_quadrado">9</button>
+    <button class="btn_quadrado">/</button>
+    <br>
+    <button class="btn_quadrado">4</button>
+    <button class="btn_quadrado">5</button>
+    <button class="btn_quadrado">6</button>
+    <button class="btn_quadrado">*</button>
+    <br>
+    <button class="btn_quadrado">1</button>
+    <button class="btn_quadrado">2</button>
+    <button class="btn_quadrado">3</button>
+    <button class="btn_quadrado">-</button>
+    <br>
+    <button class="btn_quadrado">0</button>
+    <button class="btn_quadrado">C</button>
+    <button class="btn_quadrado">=</button>
+    <button class="btn_quadrado">+</button>
+</div>
+
+<script>
+const botoes = document.querySelectorAll('.btn_quadrado');
+const display = document.getElementById('display');
+let valorAtual = '';
+let operador = null;
+
+botoes.forEach(botao => {
+    botao.addEventListener('click', () => {
+        if (botao.textContent === 'C') {
+            valorAtual = '';
+            operador = null;
+            display.value = '';
+        } else if (botao.textContent === '=') {
+            if (operador === '+') {
+                display.value = parseFloat(valorAtual) + parseFloat(display.value);
+            } else if (operador === '-') {
+                display.value = parseFloat(valorAtual) - parseFloat(display.value);
+            } else if (operador === '*') {
+                display.value = parseFloat(valorAtual) * parseFloat(display.value);
+            } else if (operador === '/') {
+                display.value = parseFloat(valorAtual) / parseFloat(display.value);
+            }
+            valorAtual = '';
+            operador = null;
+        } else if (isNaN(botao.textContent)) {
+            operador = botao.textContent;
+            valorAtual = display.value;
+            display.value = '';
+        } else {
+            display.value += botao.textContent;
+        }
+    });
+});
+</script>
+
+</body>
+</html>
