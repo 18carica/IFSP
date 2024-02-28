@@ -6,9 +6,13 @@
     <title>Aula 3 PHP Básico</title>
 </head>
     <body>
-        <?php
-        $data_de_hoje = date("d/M/Y",time());
-        ?>
+        <h3>Exemplo 1</h3>
+        
+            <?php
+            $data_de_hoje = date("d/M/Y",time());
+            ?>
+        
         <p aligh="center">Hoje é dia <?php echo $data_de_hoje;?></p>
+        
     </body>
 </html>
