@@ -6,12 +6,14 @@
     <title>Exercicio 10</title>
 </head>
 <body>
-
-//Exercício 10: Simule a ausência do arquivo com include e require e inclua abaixo o retorno do servidor para ambas as situações.
-    
+       
     <h3>Exercício 10</h3>
     <?php
-        // Seu código PHP aqui
+        //Exercício 10: Simule a ausência do arquivo com include e require e inclua abaixo o retorno do servidor para ambas as situações.
+        echo "<h4>include</h4>";
+        echo "<p>include 'exercicio9.php'</p>";
+        echo "<h4>require</h4>";
+        echo "<p>require 'exercicio11.php'</p>";
     ?>
 </body>
 </html>
