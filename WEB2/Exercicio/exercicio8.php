@@ -10,10 +10,7 @@
     <?php
     //Exercício 8: Crie uma função que imprima “Neste dia tem aula de DW2”/ “Neste dia não tem aula de DW2” com base no dia da semana em formato string informado como parâmetro.
 
-    function verificarAulaDW2($diaSemana) {
-        // Converter para minúsculas para garantir que a comparação não seja sensível a maiúsculas
-        $diaSemana = strtolower($diaSemana);
-    
+    function verificarAulaDW2($diaSemana) {    
         // Array associativo que mapeia o dia da semana para se há aula de DW2 ou não
         $aulasDW2 = array(
             "segunda-feira" => "Neste dia não tem aula de DW2",
@@ -49,7 +46,6 @@
     echo "segunda => ";
     verificarAulaDW2("segunda");
     echo "<br>";
-    
     ?>
 </body>
 </html>

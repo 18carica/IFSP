@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 9</title>
 </head>
-<body>
-    
+<body> 
     <h3>Exercício 9</h3>
     <p>Include do exercicio8.php</p>
     <?php
@@ -14,6 +13,5 @@
         
         include 'exercicio8.php'
     ?>
-
 </body>
 </html>
